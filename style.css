@@ -132,7 +132,7 @@ section {
 .tahapan::before {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 50%;
@@ -142,11 +142,11 @@ section {
 .tahapan::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    height: 40%;
-    background: linear-gradient(to top, #191970, #fff);
+    height: 35%;
+    background: linear-gradient(to top, #fff, #191970);
 }
 
 /* Bantuan Section */
