@@ -40,11 +40,21 @@ nav ul a:hover {
 /* hero */
 
 section {
+    position: relative;
     min-height: 90vh;
     display: flex;
     justify-content: space-between;
     padding-inline: 200px;
     align-items: center;
+    z-index: 1;
+}
+
+.hero-left,
+.hero-right,
+.tahapan-left,
+.tahapan-right {
+  position: relative;
+  z-index: 1;
 }
 
 .hero {
@@ -108,6 +118,31 @@ section {
 
 .step h3 {
     text-align: justify;
+}
+
+.tahapan {
+    position: relative;
+    overflow: hidden;
+}
+
+.tahapan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: #fff;
+}
+
+.tahapan::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, #191970, #fff);
 }
 
 @media screen and (max-width: 768px) {
