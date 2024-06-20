@@ -39,12 +39,15 @@ nav ul a:hover {
 
 /* hero */
 
-.hero {
+section {
     min-height: 90vh;
     display: flex;
     justify-content: space-between;
     padding-inline: 200px;
     align-items: center;
+}
+
+.hero {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, rgb(25, 25, 112) 50%, rgb(25, 25, 112) 100%);
 }
 
@@ -85,12 +88,34 @@ nav ul a:hover {
     color: white;
 }
 
+.tahapan-left {
+    width: 50%;
+}
+
+.tahapan-right {
+    width: 50%;
+}
+
+.tahapan img {
+    width: 80%;
+}
+
+.step {
+    display: flex;
+    margin-block: 5px;
+    gap: 20px;
+}
+
+.step h3 {
+    text-align: justify;
+}
+
 @media screen and (max-width: 768px) {
     nav {
         padding-inline: 50px;
     }
 
-    .hero {
+    section {
         padding-inline: 50px;
     }
 
@@ -108,13 +133,13 @@ nav ul a:hover {
         display: none;
     }
 
-    .hero {
+    section {
         padding: 20px;
         flex-direction: column;
         gap: 24px;
     }
 
-    .hero-left {
+    .hero-left, .tahapan-left, .tahapan-right {
         width: 100%;
     }
 
@@ -124,5 +149,13 @@ nav ul a:hover {
 
     .hero-right h3 {
         color: white;
+    }
+
+    .tahapan img {
+        width: 100%;
+    }
+
+    .tahapan {
+        justify-content: center;
     }
 }
