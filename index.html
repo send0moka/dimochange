@@ -54,5 +54,101 @@
             </div>
         </div>
     </section>
+    <section class="bantuan">
+        <div class="bantuan-left">
+            <h1>Halo sobat Dimo! Ada yang bisa kami bantu?</h1>
+            <h3 style="color: #191970">Ingin tau tentang apa?</h3>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed">
+                            <div class="accordion-button-text">Apakah pada aplikasi DimoChange dapat mengubah saldo pulsa menjadi saldo digital?</div>
+                            <div class="accordion-button-icon">-</div>
+                        </button>
+                    </h3>
+                        <div class="accordion-body" style="display: block">
+                            <p>Aplikasi DimoChange dapat mengubah saldo pulsa yang dimiliki pengguna menjadi saldo digital dengan menggunakan fitur konversi saldo.</p>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed">
+                            <div class="accordion-button-text">Apakah pada aplikasi DimoChange dapat melakukan tarik tunai tanpa kartu?</div>
+                            <div class="accordion-button-icon">+</div>
+                        </button>
+                    </h3>
+                        <div class="accordion-body">
+                            <p>Aplikasi DimoChange dapat melakukan tarik tunai tanpa kartu dengan menggunakan fitur konversi saldo.</p>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed">
+                            <div class="accordion-button-text">Apakah transaksi pada aplikasi DimoChange aman?</div>
+                            <div class="accordion-button-icon">+</div>
+                        </button>
+                    </h3>
+                        <div class="accordion-body">
+                            <p>Transaksi pada aplikasi DimoChange aman.</p>
+                        </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed">
+                            <div class="accordion-button-text">Bagaimana cara mendapatkan reward pada aplikasi DimoChange?</div>
+                            <div class="accordion-button-icon">+</div>
+                        </button>
+                    </h3>
+                        <div class="accordion-body">
+                            <p>Reward pada aplikasi DimoChange dapat diakses melalui menu reward pada aplikasi DimoChange.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="bantuan-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Apa yang dapat kami bantu?" />
+                <button>
+                    <img src="search.svg" alt="Search" />
+                </button>
+            </div>
+            <div class="bantuan-lainnya">
+                <h1>Bantuan Lainnya?</h1>
+                <a href="https://wa.me/628156618553" target="_blank">
+                    <h3>Hubungi Kami</h3>
+                </a>
+                <img src="woman.png" height="200px">
+            </div>
+        </div>
+    </section>
+    <script>
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement.parentElement;
+                const accordionBody = accordionItem.querySelector('.accordion-body');
+                const accordionIcon = button.querySelector('.accordion-button-icon');
+
+                accordionButtons.forEach(btn => {
+                    if (btn !== button) {
+                        const siblingAccordionItem = btn.parentElement.parentElement;
+                        const siblingAccordionBody = siblingAccordionItem.querySelector('.accordion-body');
+                        siblingAccordionBody.style.display = 'none';
+                        const siblingAccordionIcon = btn.querySelector('.accordion-button-icon');
+                        siblingAccordionIcon.textContent = '+';
+                    }
+                });
+
+                if (accordionBody.style.display === 'none') {
+                    accordionBody.style.display = 'block';
+                    accordionIcon.textContent = '-';
+                } else {
+                    accordionBody.style.display = 'none';
+                    accordionIcon.textContent = '+';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
